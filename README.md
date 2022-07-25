@@ -83,4 +83,9 @@ which command would you use in order to create an empty file in the current dire
  (base) icipe@ghost:~/work/mini-project/RNA-seq$ 
 ```
 
+## QUESTION 5
+Suppose your current working directory contains a file named seqs.txt. How do you rename this file into sequences.fasta ? Does this have any effect on the content of the file, and if yes, what does it do?
 
+**no change on the data**
+
+```mv octane.pdb prot.fasta```
