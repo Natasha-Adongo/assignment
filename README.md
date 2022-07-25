@@ -62,5 +62,12 @@ uptime
 bash date.sh > date.log
 ```
 
+### QUESTION 3
+which command would you use in order to create an empty file in the current directory, lets say empty.txt
 
+```$ touch empty.txt```
+
+```$ ls```
+```  EcoliSRR_anno_variants.vcf   lib                           ofile.csv                             setup                   Work
+ chromfiles             empty.txt              
 
