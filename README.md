@@ -183,8 +183,41 @@ less -S identifiers.txt
 >XM_001155756.5 PREDICTED: Pan troglodytes nuclear respiratory factor 1 (NRF1), transcript variant X8, mRNA
 >XM_017957164.2 PREDICTED: Papio anubis nuclear respiratory factor 1 (NRF1), transcript variant X12, mRNA
 >XM_021673680.1 PREDICTED: Aotus nancymaae nuclear respiratory factor 1 (NRF1), transcript variant X1, mRNA
+```
 
 
+## QUESTION 13 
+Can you write a very short script possibly a single commandline to etract from the same file the species name?
 
+```
+$ cut -d ' ' -f 2-4 identifiers.txt |cut -d : -f 2 | sed 's/^ *//g'| cut -d '' -f 1
+
+Mus musculus nuclear
+Mus musculus nuclear
+Mus musculus nuclear
+Mus musculus nuclear
+Mus musculus 0
+Mus caroli
+Mus caroli
+Mus musculus 10
+Mus musculus 14
+Mus musculus nuclear
+Mus musculus nuclear
+Mus musculus
+Mus musculus 13
+Mus pahari
+Rattus norvegicus
+Peromyscus maniculatus
+Mus musculus nuclear
+Mus musculus 6
+Mus musculus 6
+Mus musculus
+Mus pahari
+Cricetulus griseus
+Mesocricetus auratus
+Rattus norvegicus
+Nannospalax galili
+Nannospalax galili
+```
 
 
