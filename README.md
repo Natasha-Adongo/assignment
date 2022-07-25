@@ -71,7 +71,7 @@ which command would you use in order to create an empty file in the current dire
 ```  EcoliSRR_anno_variants.vcf   lib                           ofile.csv                             setup                   Work
  chromfiles             empty.txt   
  ```
- ## Question 4  
+ ## QUESTION 4  
  You are in /home/icipe/  suppose this directory is empty. How do you create in only one command the whole path /home/icipe/Work/mini-project/RNA-Seq/?
  ```
  mkdir -p work/mini-project/RNA-seq 
@@ -88,4 +88,10 @@ Suppose your current working directory contains a file named seqs.txt. How do yo
 
 **no change on the data**
 
-```mv octane.pdb prot.fasta```
+```mv octane.pdb prot.fasta``` 
+
+## QUESTION 6 
+How can you create in a single command a file containing the contents "Hello, world!" and named universal_greeting.txt?  
+```echo "hello, world!!" > universal_greeting.txt```  
+```cat universal_greeting.txt```  
+``` hello, world!!!```
