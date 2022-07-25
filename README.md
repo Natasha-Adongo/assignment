@@ -218,6 +218,36 @@ Mesocricetus auratus
 Rattus norvegicus
 Nannospalax galili
 Nannospalax galili
-```
+```  
+## QUESTION 14  
+Once this is done, how do you count the species names with their order of multiplicity 
+(i.e. how many sequences belong to Mus musculus, how many to Homo sapiens, etc)?  
+
+```  
+cut -d ' ' -f 2-4 identifiers.txt | cut -d : -f 2 | sed 's/^ *//g'| cut -d ' ' -f 1,2 | uniq -c | sort -n
+```  
+```  
+      1 Rattus norvegicus
+      1 Rattus norvegicus
+      1 Rhinopithecus roxellana
+      2 Cercocebus atys
+      2 Cercocebus atys
+      2 Chlorocebus sabaeus
+      2 Homo sapiens
+      2 Mus caroli
+      2 Mus musculus
+      2 Mus musculus
+      2 Nannospalax galili
+      2 Pan troglodytes
+      2 Pongo abelii
+      2 Rhinopithecus roxellana
+      2 Rhinopithecus roxellana
+      3 Heterocephalus glaber
+      4 Mus musculus
+      5 Chinchilla lanigera
+      5 Mus musculus
+      6 Mus musculus
+```  
+
 
 
