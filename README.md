@@ -103,3 +103,12 @@ what about creating the same file but with filenae "Universal greetings.txt"
 $ echo "universal greetings.txt"
 universal greetings.txt
 ```
+## QUESTION 8  
+How can you use the commandline (on whichever machine you are now, that is connected to the internet) to download directly the 
+file you can see on https://github.com/Fnyasimi/my-first-repo/blob/main/directory1/test.fa ? Be careful, you need to get the raw text file itself, 
+not the full HTML page presenting it.  
+```
+wget https://github.com/Fnyasimi/my-first-repo/blob/main/directory1/test.fa?raw=true
+```  
+
+
