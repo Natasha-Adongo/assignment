@@ -69,5 +69,11 @@ which command would you use in order to create an empty file in the current dire
 
 ```$ ls```
 ```  EcoliSRR_anno_variants.vcf   lib                           ofile.csv                             setup                   Work
- chromfiles             empty.txt              
+ chromfiles             empty.txt   
+ ```
+ ## Question 4  
+ ```
+ mkdir -p work/mini-project/RNA-seq 
+ ```
+ 
 
