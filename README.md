@@ -72,6 +72,7 @@ which command would you use in order to create an empty file in the current dire
  chromfiles             empty.txt   
  ```
  ## Question 4  
+ You are in /home/icipe/  suppose this directory is empty. How do you create in only one command the whole path /home/icipe/Work/mini-project/RNA-Seq/?
  ```
  mkdir -p work/mini-project/RNA-seq 
  ```
