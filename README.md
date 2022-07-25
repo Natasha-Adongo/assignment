@@ -94,4 +94,4 @@ Suppose your current working directory contains a file named seqs.txt. How do yo
 How can you create in a single command a file containing the contents "Hello, world!" and named universal_greeting.txt?  
 ```echo "hello, world!!" > universal_greeting.txt```  
 ```cat universal_greeting.txt```  
-``` hello, world!!!```
+``` hello, world!!```
