@@ -115,4 +115,30 @@ How can you count the number of lines in this text file(test.fa)? How do you cou
 ```
 $ wc -l test.fa\?raw\=true
 10281 test.fa?raw=true
+```  
+## QUESTION 10  
+Extract only the identifier lines from this file, and write them into a file called "identifiers.txt".  
 ```
+grep -w ">*" test.fa\?raw\=true > identifiers.txt
+```
+```>NM_001361694.1 Mus musculus nuclear respiratory factor 1 (Nrf1), transcript variant 9, mRNA
+>NM_001361695.1 Mus musculus nuclear respiratory factor 1 (Nrf1), transcript variant 10, mRNA
+>NM_001164226.1 Mus musculus nuclear respiratory factor 1 (Nrf1), transcript variant 1, mRNA
+>NM_010938.4 Mus musculus nuclear respiratory factor 1 (Nrf1), transcript variant 6, mRNA
+>AK082580.1 Mus musculus 0 day neonate cerebellum cDNA, RIKEN full-length enriched library, clone:C230066G05 product:nuclear respiratory factor 1, full insert sequence
+>XM_021165121.1 PREDICTED: Mus caroli nuclear respiratory factor 1 (Nrf1), transcript variant X5, mRNA
+>XM_021165122.1 PREDICTED: Mus caroli nuclear respiratory factor 1 (Nrf1), transcript variant X6, mRNA
+>AK029034.1 Mus musculus 10 days neonate skin cDNA, RIKEN full-length enriched library, clone:4732483G17 product:nuclear respiratory factor 1, full insert sequence
+>AK014494.1 Mus musculus 14 days embryo liver cDNA, RIKEN full-length enriched library, clone:4432414E03 product:nuclear respiratory factor 1, full insert sequence
+>NM_001361693.1 Mus musculus nuclear respiratory factor 1 (Nrf1), transcript variant 8, mRNA
+>NM_001361692.1 Mus musculus nuclear respiratory factor 1 (Nrf1), transcript variant 7, mRNA
+>XM_011241048.1 PREDICTED: Mus musculus nuclear respiratory factor 1 (Nrf1), transcript variant X8, mRNA
+>AK031103.1 Mus musculus 13 days embryo forelimb cDNA, RIKEN full-length enriched library, clone:5930405C14 product:nuclear respiratory factor 1, full insert sequence
+>XM_021189475.1 PREDICTED: Mus pahari nuclear respiratory factor 1 (Nrf1), transcript variant X3, mRNA
+>XM_006236198.3 PREDICTED: Rattus norvegicus nuclear respiratory factor 1 (Nrf1)identifiers.txt
+
+```
+
+
+
+
