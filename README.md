@@ -190,7 +190,7 @@ less -S identifiers.txt
 Can you write a very short script possibly a single commandline to etract from the same file the species name?
 
 ```
-$ cut -d ' ' -f 2-4 identifiers.txt |cut -d : -f 2 | sed 's/^ *//g'| cut -d '' -f 1,2
+$ cut -d ' ' -f 2-4 identifiers.txt |cut -d : -f 2 | sed 's/^ *//g'| cut -d '' -f 1
 
 Mus musculus nuclear
 Mus musculus nuclear
@@ -224,7 +224,7 @@ Once this is done, how do you count the species names with their order of multip
 (i.e. how many sequences belong to Mus musculus, how many to Homo sapiens, etc)?  
 
 ```  
-$ cut -d ' ' -f 2-4 identifiers.txt | cut -d : -f 2 | sed 's/^ *//g'| cut -d ' ' -f 1,2 | uniq -c | sort -n
+cut -d ' ' -f 2-4 identifiers.txt | cut -d : -f 2 | sed 's/^ *//g'| cut -d ' ' -f 1,2 | uniq -c | sort -n
 ```  
 ```  
       1 Rattus norvegicus
@@ -274,4 +274,38 @@ Write a loop in bash producing all the intergers from 1 to 30, one perline
 17
 18
 19 
-```
+```  
+## QUESTION 16  
+Create at once 20 files called "trial1" to "trial20" and *then* rename them all by appending the suffix ".data". 
+Of course, don't issue 20 commands, but just one.  
+```  
+touch $(seq -f "trial%g" 1 20) |  for f in trial* ; do mv -- "$f" "${f%g}.data" ; done 
+```  
+```  
+-rw-rw-r-- 1 icipe icipe        0 Jul 25 18:03  trial10.data
+-rw-rw-r-- 1 icipe icipe        0 Jul 25 18:03  trial11.data
+-rw-rw-r-- 1 icipe icipe        0 Jul 25 18:03  trial12.data
+-rw-rw-r-- 1 icipe icipe        0 Jul 25 18:03  trial13.data
+-rw-rw-r-- 1 icipe icipe        0 Jul 25 18:03  trial14.data
+-rw-rw-r-- 1 icipe icipe        0 Jul 25 18:03  trial15.data
+-rw-rw-r-- 1 icipe icipe        0 Jul 25 18:03  trial16.data
+-rw-rw-r-- 1 icipe icipe        0 Jul 25 18:03  trial17.data
+-rw-rw-r-- 1 icipe icipe        0 Jul 25 18:03  trial18.data
+-rw-rw-r-- 1 icipe icipe        0 Jul 25 18:03  trial19.data
+-rw-rw-r-- 1 icipe icipe        0 Jul 25 18:02  trial1.data
+-rw-rw-r-- 1 icipe icipe        0 Jul 25 18:03  trial20.data
+-rw-rw-r-- 1 icipe icipe        0 Jul 25 18:03  trial2.data
+-rw-rw-r-- 1 icipe icipe        0 Jul 25 18:03  trial3.data
+-rw-rw-r-- 1 icipe icipe        0 Jul 25 18:03  trial4.data
+-rw-rw-r-- 1 icipe icipe        0 Jul 25 18:03  trial5.data
+-rw-rw-r-- 1 icipe icipe        0 Jul 25 18:03  trial6.data
+-rw-rw-r-- 1 icipe icipe        0 Jul 25 18:03  trial7.data
+-rw-rw-r-- 1 icipe icipe        0 Jul 25 18:03  trial8.data
+-rw-rw-r-- 1 icipe icipe        0 Jul 25 18:03  trial9.data
+```  
+
+
+
+
+
+
