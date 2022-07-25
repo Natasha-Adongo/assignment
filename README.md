@@ -250,4 +250,28 @@ cut -d ' ' -f 2-4 identifiers.txt | cut -d : -f 2 | sed 's/^ *//g'| cut -d ' ' -
 ```  
 
 
+## QUESTION 15
+Write a loop in bash producing all the intergers from 1 to 30, one perline
 
+```$ for numbers in 1 30 ; do seq $numbers ; done```
+```
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19 
+```
