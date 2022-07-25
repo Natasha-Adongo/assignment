@@ -1,5 +1,5 @@
 ## ASSIGNMENT 2 ##
-**BASH SCRIPTING EXERCISES **
+**BASH SCRIPTING EXERCISES**
 ## Question 1 ##
 1. How many processes are currently running on your system? Use ps and wc, the first line of output of ps is not a process!
 
