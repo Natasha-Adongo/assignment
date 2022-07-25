@@ -54,9 +54,9 @@
 Write a script that upon invocation shows the time and date, lists all logged-in users, and gives the system uptime. 
 The script then saves this information to a logfile.  
 ```
-date
-who
-uptime
+$ date
+$ who
+$ uptime
 ```
 ```
 bash date.sh > date.log
@@ -74,10 +74,10 @@ which command would you use in order to create an empty file in the current dire
  ## QUESTION 4  
  You are in /home/icipe/  suppose this directory is empty. How do you create in only one command the whole path /home/icipe/Work/mini-project/RNA-Seq/?
  ```
- mkdir -p work/mini-project/RNA-seq 
+$ mkdir -p work/mini-project/RNA-seq 
  ```
  ```
-  cd  work/mini-project/RNA-seq
+ $ cd  work/mini-project/RNA-seq
 ```
  ```
  (base) icipe@ghost:~/work/mini-project/RNA-seq$ 
@@ -88,10 +88,18 @@ Suppose your current working directory contains a file named seqs.txt. How do yo
 
 **no change on the data**
 
-```mv octane.pdb prot.fasta``` 
+```$ mv octane.pdb prot.fasta``` 
 
 ## QUESTION 6 
 How can you create in a single command a file containing the contents "Hello, world!" and named universal_greeting.txt?  
-```echo "hello, world!!" > universal_greeting.txt```  
-```cat universal_greeting.txt```  
+```$ echo "hello, world!!" > universal_greeting.txt```  
+```$ cat universal_greeting.txt```  
 ``` hello, world!!```
+
+## QUESTION 7 ##
+what about creating the same file but with filenae "Universal greetings.txt"
+
+```
+$ echo "universal greetings.txt"
+universal greetings.txt
+```
