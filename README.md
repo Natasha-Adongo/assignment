@@ -190,7 +190,7 @@ less -S identifiers.txt
 Can you write a very short script possibly a single commandline to etract from the same file the species name?
 
 ```
-$ cut -d ' ' -f 2-4 identifiers.txt |cut -d : -f 2 | sed 's/^ *//g'| cut -d '' -f 1
+$ cut -d ' ' -f 2-4 identifiers.txt |cut -d : -f 2 | sed 's/^ *//g'| cut -d '' -f 1,2
 
 Mus musculus nuclear
 Mus musculus nuclear
@@ -224,7 +224,7 @@ Once this is done, how do you count the species names with their order of multip
 (i.e. how many sequences belong to Mus musculus, how many to Homo sapiens, etc)?  
 
 ```  
-cut -d ' ' -f 2-4 identifiers.txt | cut -d : -f 2 | sed 's/^ *//g'| cut -d ' ' -f 1,2 | uniq -c | sort -n
+$ cut -d ' ' -f 2-4 identifiers.txt | cut -d : -f 2 | sed 's/^ *//g'| cut -d ' ' -f 1,2 | uniq -c | sort -n
 ```  
 ```  
       1 Rattus norvegicus
