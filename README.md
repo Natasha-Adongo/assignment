@@ -47,6 +47,20 @@
  
  187451 pts/4    Ss     0:00 bash
  
- 189339 pts/4    R+     0:00 ps```
+ 189339 pts/4    R+     0:00 ps
+ ```
+
+## QUESTION 2  
+Write a script that upon invocation shows the time and date, lists all logged-in users, and gives the system uptime. 
+The script then saves this information to a logfile.  
+```
+date
+who
+uptime
+```
+```
+bash date.sh > date.log
+```
+
 
 
