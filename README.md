@@ -160,5 +160,31 @@ CTCTGGCaGaaCaCGCCCCTGCGCCaCaGGaGGTTaaTTCaGaaCTGCCaCCTCTCaCCaTCGaTGGGaTTCCaGTCTCT
 GTGGaCaaaaTGaCCCaGGCTCaGCTTCGGGCaTTTaTCCCaGaGaTGCTCaaGTaTTCCaCaGGTCGaGGGaaaCCaGG
 CTGGGGGaaaGaaaGCTGCaaGCCTaTCTGGTGGCCaGaaGaCaTCCCaTGGGCTaaTGTCCGCaGTGaTGTCCGCaCaG
 aaGaGCaaaaaCaaaGGGTTTCaTGGaCCCaGGCaTTaCGGaCCaTaGTTaaaaaTTGTTaTa
+```
+## QUESTION 12  
+In one command, ask for the display of all identifier lines from the same file test.fa without wrapping the lines, i.e. by having all lines displayed 
+on your screen effectively start with the character '>'.  
+```  
+less -S identifiers.txt  
+```  
+```  
+>XM_015134911.1 PREDICTED: Macaca mulatta nuclear respiratory factor 1 (NRF1), transcript variant X3, mRNA
+>XM_011723890.1 PREDICTED: Macaca nemestrina nuclear respiratory factor 1 (NRF1), transcript variant X13, mRNA
+>XM_011995878.1 PREDICTED: Mandrillus leucophaeus nuclear respiratory factor 1 (NRF1), transcript variant X2, mRNA
+>XM_015134912.1 PREDICTED: Macaca mulatta nuclear respiratory factor 1 (NRF1), transcript variant X4, mRNA
+>XM_003803318.3 PREDICTED: Otolemur garnettii nuclear respiratory factor 1 (NRF1), mRNA
+>NM_001164227.1 Mus musculus nuclear respiratory factor 1 (Nrf1), transcript variant 2, mRNA
+>AK037697.1 Mus musculus 16 days neonate thymus cDNA, RIKEN full-length enriched library, clone:A130038J21 product:SIMILAR TO NUCLEAR RESPIRATORY FACTOR 1 homolog [Mus musculu>
+>XM_016958154.2 PREDICTED: Pan troglodytes nuclear respiratory factor 1 (NRF1), transcript variant X7, mRNA
+>XM_021936263.1 PREDICTED: Papio anubis nuclear respiratory factor 1 (NRF1), transcript variant X10, mRNA
+>XM_003813488.3 PREDICTED: Pan paniscus nuclear respiratory factor 1 (NRF1), transcript variant X4, mRNA
+>XM_003896587.4 PREDICTED: Papio anubis nuclear respiratory factor 1 (NRF1), transcript variant X11, mRNA
+>XM_003951129.3 PREDICTED: Pan troglodytes nuclear respiratory factor 1 (NRF1), transcript variant X9, mRNA
+>XM_001155756.5 PREDICTED: Pan troglodytes nuclear respiratory factor 1 (NRF1), transcript variant X8, mRNA
+>XM_017957164.2 PREDICTED: Papio anubis nuclear respiratory factor 1 (NRF1), transcript variant X12, mRNA
+>XM_021673680.1 PREDICTED: Aotus nancymaae nuclear respiratory factor 1 (NRF1), transcript variant X1, mRNA
+
+
+
 
 
