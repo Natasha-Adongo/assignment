@@ -71,11 +71,16 @@ which command would you use in order to create an empty file in the current dire
 ```  EcoliSRR_anno_variants.vcf   lib                           ofile.csv                             setup                   Work
  chromfiles             empty.txt   
  ```
- ## QUESTION 4  
+ ## Question 4  
  You are in /home/icipe/  suppose this directory is empty. How do you create in only one command the whole path /home/icipe/Work/mini-project/RNA-Seq/?
  ```
  mkdir -p work/mini-project/RNA-seq 
  ```
-  
-## QUESTION 5 
+ ```
+  cd  work/mini-project/RNA-seq
+```
+ ```
+ (base) icipe@ghost:~/work/mini-project/RNA-seq$ 
+```
+
 
