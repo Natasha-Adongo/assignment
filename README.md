@@ -108,7 +108,11 @@ How can you use the commandline (on whichever machine you are now, that is conne
 file you can see on https://github.com/Fnyasimi/my-first-repo/blob/main/directory1/test.fa ? Be careful, you need to get the raw text file itself, 
 not the full HTML page presenting it.  
 ```
-wget https://github.com/Fnyasimi/my-first-repo/blob/main/directory1/test.fa?raw=true
+$ wget https://github.com/Fnyasimi/my-first-repo/blob/main/directory1/test.fa?raw=true
 ```  
-
-
+## QUESTION 9
+How can you count the number of lines in this text file(test.fa)? How do you count the number of sequences
+```
+$ wc -l test.fa\?raw\=true
+10281 test.fa?raw=true
+```
