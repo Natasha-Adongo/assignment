@@ -1,2 +1,2 @@
-# assignment
-assignment
+## ASSIGNMENT 2 ##
+**BASH SCRIPTING EXERCISES **
