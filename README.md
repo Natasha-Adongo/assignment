@@ -305,7 +305,30 @@ Of course, don't issue 20 commands, but just one.
 ```  
 
 
+## QUESTION 17 ##
+
+Try this with the command "expr 1 / 0", whose purpose is to calculate the integer result of 1 divided by 0. What happens? Why?
+
+```$ expr 1 / 0```
+```expr: division by zero```
+*any integer divided by zero is gives an undefined output*
+
+
+## QUESTION 18 ##
+
+How can you separately redirect the standard output and the standard error streams into two separate files?
 
 
 
 
+## QUESTION 19 ##
+
+Write a Bash script asking "What's your name?", then waiting for you (the user) to enter you name and press Enter, 
+following what the program displays some text according to the following pattern:
+"Good morning/day/evening, your_name!
+It's now current_time on this lovely day of current_day." and it exits.
+
+
+
+## QUESTION  20 ##
+Suppose your current working directory is /home/icipe/Linux/Exercises/. What is the command that will enable to move to /home/icipe/Fun_stuff/?
