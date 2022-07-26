@@ -316,10 +316,14 @@ Try this with the command "expr 1 / 0", whose purpose is to calculate the intege
 
 ## QUESTION 18 ##
 
-How can you separately redirect the standard output and the standard error streams into two separate files?
-
-
-
+How can you separately redirect the standard output and the standard error streams into two separate files?  
+```  
+command > output.txt 2>error.txt  
+```  
+For instance  
+```  
+cat test_prot.fa >output.txt 2>error.txt
+```  
 
 ## QUESTION 19 ##
 
@@ -327,8 +331,42 @@ Write a Bash script asking "What's your name?", then waiting for you (the user) 
 following what the program displays some text according to the following pattern:
 "Good morning/day/evening, your_name!
 It's now current_time on this lovely day of current_day." and it exits.
+``` 
+echo "What is your name"
+
+read name
 
 
+hour=$(date +"%H")
+ 
+# if it is midnight to midafternoon will say G'morning
+if [ $hour -lt 12 ]
+then
+  echo "Good Morning" $name
+# if it is midafternoon to evening ( before 6 pm) will say G'noon
+elif [ $hour -lt 18 ] 
+then
+  echo "Good Afternoon" $name
+else # it is good evening till midnight
+ echo "Good evening" $name
+fi
+ 
+# display greet
+
+ current_time=$( date +"%T")
+ current_date=$(date +"%A %d %B")
+
+echo It is now $current_time on this lovely day of $current_date
+```  
+```
+What is your name
+Ann
+Good evening Ann
+It is now 18:05:16 on this lovely day of Tuesday 26 July
+```   
 
 ## QUESTION  20 ##
-Suppose your current working directory is /home/icipe/Linux/Exercises/. What is the command that will enable to move to /home/icipe/Fun_stuff/?
+Suppose your current working directory is /home/icipe/Linux/Exercises/. What is the command that will enable to move to /home/icipe/Fun_stuff/?   
+```
+cd ../../Fun_stuff
+```  
