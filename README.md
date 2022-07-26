@@ -279,7 +279,7 @@ Write a loop in bash producing all the intergers from 1 to 30, one perline
 Create at once 20 files called "trial1" to "trial20" and *then* rename them all by appending the suffix ".data". 
 Of course, don't issue 20 commands, but just one.  
 ```  
-touch $(seq -f "trial%g" 1 20) |  for f in trial* ; do mv -- "$f" "${f%g}.data" ; done 
+ touch $(seq -f "trial%g" 1 20) ; for f in trial* ; do mv $f $f.data ; done
 ```  
 ```  
 -rw-rw-r-- 1 icipe icipe        0 Jul 25 18:03  trial10.data
