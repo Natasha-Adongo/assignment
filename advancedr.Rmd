@@ -1,0 +1,97 @@
+---
+title: "advancedr"
+author: "Vanessa"
+date: "`r Sys.Date()`"
+output: html_document
+---
+install.packages("tidyverse")
+library(tidyverse)
+library(datasets)
+library(gapminder)
+attach(iris)
+iris
+###select allows you to select a few variables among many in your dataset
+###select function with and without the pipe function
+```
+sepal<-select(iris,Sepal.Length,Sepal.Width)
+sepal<-iris %>%select(Sepal.Length,Sepal.Width)
+```
+##Remove  one column from the data 
+```
+less_sepal<-select(sepal,-Sepal.Width)
+View(less_sepal)
+less_species<-select(iris,-Species)
+```
+##Renaming a column 
+```
+tidy_sepal<-iris%>%rename(Sepal_Width=SepalWidth)
+```
+##Filter function allows you to select a subset of rows in a data frame.
+```iris_virginica<-iris%>%filter(Species=="virginica")
+iris_virginica_sepal<-iris%>% filter(Species=="virginica",Sepal.Length>6)
+iris_setosa_sepal<-iris %>%filter(Species=='setosa')%>%select(Sepal.Length,Sepal.Width)
+```
+#################################################################################
+#challenge -question
+```
+iris_species<-iris%>%select(Sepal.Width, Sepal.Length, Species)%>%filter(Sepal.Length>5)
+```
+
+#group_by()
+###this function reduces error prone repetitiveness
+###split original data frame into multiple pieces
+```
+str(iris) ##allows you to check the properties of the dataset
+str(iris%>%group_by(Species))
+sep<-iris%>%group_by(Species)
+View(sep2)
+sep2<-iris%>%group_by(Sepal.Width>3.5) #This gives a logical response of items in the data that have met the condition
+```
+##summarize
+##turn many observations into a single data point
+```
+datta<-iris%>%summarise(mean(Species))
+gdp_byspecies<-iris%>%group_by(Species)%>%summarise(mean_species=mean(Sepal.Length))
+```
+##to group per two variables
+###this code groups the data into species and petal.length and from this summarizes it based on the  sepal width mean
+```
+gdp_byspecies<-iris%>%group_by(Species,Petal.Length)%>%summarise(mean_sepal_width=mean(Sepal.Width))
+```
+##To calculate multiple single data points
+```gdp_byspecies<-iris%>%group_by(Species,Petal.Length)%>%summarise(mean_sepal_width=mean(Sepal.Width),mean_petal_length=mean(Petal.Length),sd_sepa_length=mean(Sepal.Length))
+```
+#######################################################################################################################
+###Challenge
+```
+Species_groupby<-iris%>%group_by(Species,Sepal.Width)%>%summarize(mean_sepal.width=mean(Sepal.Width),sd_sepal.width=mean(Sepal.Width),min_sepal.width=min(Sepal.Width),max_sepal.width=max(Sepal.Width))
+View(Species_groupby)
+```
+###Mutate
+###This creates a new variables of a data frame
+###for example changing Sepal.length milimetre
+iris_SLMm<-iris%>%mutate(Sepal.Length=Sepal.Length*10)
+###creating a new column 
+iris%>%mutate(SLMm=Sepal.Length*10)
+
+#############################################################################################################################
+```
+iris2<-iris%>%mutate(SPlength=Sepal.Length/Petal.Length)
+iris3<-iris2%>%group_by(Species,SPlength)%>%summarise(mean_splength=mean(SPlength),min_splength=min(SPlength),max_splength=max(SPlength),sd_splength=mean(SPlength))
+View(iris3)
+```
+
+#####ggplots2
+####Built for the grammar of graphics
+###Most effective for creating publication quality graphics
+##Common plots include:-Scatterplot,Line plots,Bar plots,Histogram,Boxplot
+####1....Scatterplots.....
+###These allow you to compare two variables within your data
+###geom_point is used for this
+install.packages ("ggplot2")
+iris_small<-iris%>%filter(Sepal.Length>5)
+ggplot2(iris_small,aes(x=Petals.Length, y=Petal.Width))+geom_point
+
+
+install.packages("rmarkdown")
+
